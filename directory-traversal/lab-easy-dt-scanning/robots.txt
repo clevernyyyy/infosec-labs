@@ -1,0 +1,19 @@
+User-agent: *
+Disallow:
+/addins/
+/admin/
+/advance/
+/aspclient/
+/aspnet/
+/aspnet_client/
+/assembly/
+/img/
+/public/
+/redherring/
+/service/
+/source/
+/system32/
+/temp/
+/tmp/
+/tracing/
+/web/

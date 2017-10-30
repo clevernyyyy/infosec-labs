@@ -1,0 +1,140 @@
+<html>
+<head><link rel="shortcut icon" href="favicon.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" 
+integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" 
+crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+
+    <title>
+      SQLi Lab - Instructions
+    </title>
+</head>
+
+<body>
+  <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="http://enveed.com">Enveed.com</a>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/index.php">Home</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/instructions.html">Instructions <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/hints.html">Hints</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+<div class="container">
+<h1 style="margin: 0 auto; color: #6D2528;">Welcome to Xtreme Sender Service!</h1>
+
+<h3 style="color: #DD3F33;">Objective:</h3>
+
+<p>The goal of this lab is to use cross-site-scripting (xss) to steal credits from the <code>megarich</code> user by sending a 
+message from the <code>pooruser</code>.  </p>
+
+<p>There are two users on this box, both vulnerable to xss attacks.  You'll need to open two browsers (or a private session), to log 
+into both users.  The users are listed below:</p>
+
+<table class=".table-striped table-bordered" style="width:50%; margin: 20px auto;">
+  <tr>
+    <th align="left">User</th>
+    <th align="left">Password</th>
+  </tr>
+  <tr>
+    <td>pooruser</td>
+    <td>pass</td> 
+  </tr>
+  <tr>
+    <td>megarich</td>
+    <td>abc123</td> 
+  </tr>
+</table>
+
+
+<h3 style="color: #DD3F33;">Stretch Goals:</h3>
+
+<p>While the main goal is to steal credits, there are several other fun things that you can do, including:</p>
+<ul>
+	<li>Can you login as the <code>megarich</code> user?  How would you go about that?  Do you steal a session?  Social Engineer 
+the password?</li>
+	<li>How would you go about stealing all of the <code>megarich</code> user's messages?  All of his messages are just 
+displayed on the client side html, how can you grab it?</li>
+	<li>Clearly the data is being saved somewhere, is it possible to play with the data?</li>
+</ul>
+
+
+<h3 style="color: #DD3F33;">Scoring:</h3>
+
+<p>This is a new contest, but we will be operating a public scoredboard to encourage competition. The scores will be updated as live 
+as possible and will carry over from session to session.  You will submit your attack vectors through XXXXXXX.  You can find scoring 
+below:</p>
+
+
+<table class=".table-striped table-bordered" style="width:95%; margin: 20px auto;">
+  <tr>
+    <th align="left">Points</th>
+    <th align="left">Attack</th>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>Social Engineer a way to get <code>megarich</code> to send <code>pooruser</code> his credentials. Example: An alert (styled 
+similarly to this website) that requires a password to be re-entered.</td> 
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>Login as the other user. Example: <code>Megarich</code> sends message to <code>pooruser</code> which steals 
+<code>pooruser's</code> session.</td> 
+  </tr>
+  <tr>
+    <td>25</td>
+    <td>Steal credits from one user to another. Example: <code>Pooruser</code> sends a message which steals <code>megarich's</code> 
+credits.</td> 
+  </tr>
+  
+  <tr>
+    <td>40</td>
+    <td>Steal a user's messages. Example: <code>Pooruser</code> sends a message and returns all of <code>megarich's</code> 
+messages.</td> 
+  </tr>
+  
+  <tr>
+    <td>100</td>
+    <td>Add user to the database.</td> 
+  </tr>
+  <tr>
+    <td>1,000,000</td>
+    <td>Escape Google Chrome's sandbox.</td> 
+  </tr>
+</table>
+
+
+
+<h3 style="color: #DD3F33;">Send Off:</h3>
+
+<p>Of course, throughout this exercise, you'll no doubt cause some damage.  Several of you may be looking at it at the same time, so 
+don't forget the "RESET BOX" button on the main login page!!!</p>
+
+<a href="./main_login.php">I'm Ready!</a>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" 
+integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" 
+integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" 
+integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+</body>
+</html>

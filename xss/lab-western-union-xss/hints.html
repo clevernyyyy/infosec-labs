@@ -1,0 +1,104 @@
+<html>
+<head><link rel="shortcut icon" href="favicon.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" 
+integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" 
+crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+
+    <title>
+      XSS Lab - Hints
+    </title>
+</head>
+
+<body>
+  <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="http://enveed.com">Enveed.com</a>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/index.php">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/instructions.html">Instructions</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/hints.html">Hints <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+<div class="container">
+
+<h1 style="color:#DD3F33;">Hints</h1>
+<h4>Here are several hints, try to solve with as few hints as possible...</h4>
+
+
+<h2 style="margin-bottom: 0px; text-transform: uppercase; font-family: sans-serif; font-weight: 100; font-size: 18px; 
+color:#6D2528;">Hint #1</h2>
+<span>Just give me a little something to get started...</span>
+<button id="btn1" onclick="showHint(1)">Show</button>
+<div style="color:#DD3F33;margin-top:10px;"><p id="hint1" style="display:none">Try opening the browser inspector and play with the 
+console to see what you can touch with a script.</p></div>
+
+
+<h2 style="margin-bottom: 0px; text-transform: uppercase; font-family: sans-serif; font-weight: 100; font-size: 18px; 
+color:#6D2528;">Hint #2</h2>
+<span>Okay, I need another hint, maybe something more specific...</span>
+<button id="btn2" onclick="showHint(2)">Show</button>
+<div style="color:#DD3F33;margin-top:10px;"><p id="hint2" style="display:none">Login and open the browser inspector, go to the 
+console and type "user", hit enter.  What displays?  How about if you type "user.value = 'test'"</p></div>
+
+
+<h2 style="margin-bottom: 0px; text-transform: uppercase; font-family: sans-serif; font-weight: 100; font-size: 18px; 
+color:#6D2528;">Hint #3</h2>
+<span>Okay, I am having issues...</span>
+<button id="btn3" onclick="showHint(3)">Show</button>
+<div style="color:#DD3F33;margin-top:10px;"><p id="hint3" style="display:none">One way to steal credits would be to simply force the 
+<code>megarich</code> user to send credits back to <code>pooruser</code>.  Can you use what you learned in Hints #1 and #2 to do 
+that?</p></div>
+
+<a href="https://imgflip.com/i/1t11rf"><img style="margin-top:30px" src="https://i.imgflip.com/1t11rf.jpg"/></a>
+
+
+<script>
+  function showHint(num) {
+      const hint = `hint${num}`;
+      const btn = `btn${num}`;
+
+      // toggle hint
+      var x = document.getElementById(hint);
+      if (x.style.display === 'none') {
+          x.style.display = 'block';
+      } else {
+          x.style.display = 'none';
+      }
+      
+      // toggle btn
+      var y = document.getElementById(btn);
+      if (y.innerHTML === 'Show') {
+          y.innerHTML = 'Hide';
+      } else {
+          y.innerHTML = 'Show';
+      }
+  }
+</script>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" 
+integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" 
+integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" 
+integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+</body>
+</html>
+

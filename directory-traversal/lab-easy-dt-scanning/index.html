@@ -1,0 +1,1099 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<title>CSG Stylee</title>
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet" />
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" />
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link type="text/css" rel="stylesheet" href="https://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+	<link type="text/css" rel="stylesheet" href="https://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
+	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic'
+		rel='stylesheet' type='text/css' />
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet'
+		type='text/css' />
+
+
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="navbar-inner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-pyramid" style="font-size: 30px; color: #3498db;"></span>
+                    </button>
+                    <a class="navbar-brand hidden-xs hidden-sm" href="../../../Default.aspx">
+                        <span class="icon icon-pyramid" style="font-size: 18px; color: #3498db;"></span>
+                    </a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul id="mnuHome" class="nav navbar-nav">
+                    	<li><a href="http://enveed.com">Enveed.com</a></li>
+                        <li><a href="http://dt.enveed.com" class="smoothScroll">Home</a></li>
+                        <li><a href="#about" class="smoothScroll">About</a></li>
+                        <li><a href="#contact" class="smoothScroll">Contact</a></li>
+                        <li><a href="#">Technical Blog</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="https://www.youtube.com/watch?v=azSKUVrJ_4M">OmahaStylee</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+<style type="text/css">
+<!--
+.iconText {
+    margin-left: 10px;
+}
+
+/*Pop-over Special Class*/
+.popover.popover-medium
+{
+	max-width:600px !important;
+	width:auto !important;
+}
+
+/*Black Shadow*/
+.black-shadow
+{
+	text-shadow: 0 0 30px black;
+	/*box-shadow*/
+}
+
+.whereImage
+{
+    border: 1px solid #000000;
+    border-radius: 10px;
+    display: inline-block;
+    float: left;
+    height: 90px;
+}
+
+/*Thumb*/
+.thumb
+{
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid #000000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000000;
+    display: inline-block;
+    float: left;
+    height: 105px;
+    line-height: 100px;
+    margin: 3px;
+    text-align: center;
+    padding: 0 7px;
+}
+
+.thumb:hover {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.75);
+    border: 1px solid #0066CC;
+    box-shadow: 0 0 5px #0066CC;
+}
+
+.panel-heading
+{
+    background: #D1E0FF !important;
+}
+.panel-heading:hover 
+{
+    background: #99CCFF !important;
+}
+
+
+/* ==========================================================================
+   Base Styles and Bootstrap Modifications
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+	color: #222;
+}
+
+body {
+	font-size: 1em;
+	line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+	background: #f2c2c9;
+	color: #a4003a;
+	text-shadow: none;
+}
+
+::selection {
+	background: #16a085;
+	color: #a4003a;
+	text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+ hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin: 1em 0;
+	padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+ img {
+	vertical-align: middle;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+ textarea {
+	resize: vertical;
+}
+
+
+/* ==========================================================================
+   General styles
+   ========================================================================== */
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	font-family: "Lato";
+	font-weight: 300;
+	font-size: 16px;
+	color: #555;
+
+	-webkit-font-smoothing: antialiased;
+	-webkit-overflow-scrolling: touch;
+}
+
+.col-md-4 {
+	padding-bottom: 20px;
+}
+
+.row {
+margin-right: 0px;
+margin-left: -15px;
+}
+
+.modal-header {
+	background: #3498db;
+}
+
+.modal-header h4 {
+	color: white;
+}
+
+.modal-footer {
+	background: #2b2b2b;
+}
+
+
+.navbar-default {
+border-color: transparent;
+background-color: #dadada;
+}
+
+
+.navbar-toggle {
+border-color: transparent;
+border: 0px solid transparent;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+	background-color: #16a085;
+	color: white;
+}
+
+
+
+hr {
+	position: relative;
+	border: none;
+}
+
+hr:before {
+	content: " ";
+	position: absolute;
+	top: 0;
+	left: 25%;
+	width: 50%;
+	height: 2px;
+	background: #ccc;
+}
+
+a img {
+	background: white;
+}
+
+.odd a img {
+	background: #f5f5f5;
+}
+
+/* Titles */
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Raleway";
+	font-weight: 300;
+	color: #333;
+}
+
+
+/* Paragraph & Typographic */
+p {
+	line-height: 28px;
+	margin-bottom: 25px;
+}
+
+.centered {
+	text-align: center;
+}
+
+.paragraph-lead {
+	font-size: 20px;
+	color: #3498db;
+}
+
+strong {
+	font-weight: 700;
+}
+
+em {
+	font-weight: 300;
+}
+
+pre {
+	background: #ebebeb;
+	border: none;
+	font-family: "Monaco";
+	font-size: 16px;
+	color: #666;
+	padding: 20px;
+	line-height: 28px;
+}
+
+small {
+	font-size: 12px;
+}
+
+blockquote,
+blockquote p {
+	line-height: 28px;
+	color: #999;
+	font-weight: 300;
+	font-style: italic;
+}
+
+blockquote {
+	position: relative;
+	margin: 0 0 40px -30px;
+	padding-left: 30px;
+	border-left: 5px solid #3498db;
+}
+
+blockquote cite {
+	position: absolute;
+	bottom: -25px;
+	right: 0;
+	font-size: 12px;
+	font-style: italic;
+	color: #333;
+	font-weight: 300;
+}
+
+blockquote cite:before {
+	content: "-- "
+}
+
+/* Images */
+.overflow-image {
+	margin-top: -65px;
+}
+
+/* Links */
+a {
+	color: #3498db;
+	word-wrap: break-word;
+
+	-webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+	-moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+	-ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+	-o-transition: color 0.1s ease-in, background 0.1s ease-in;
+	transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+a:hover,
+a:focus {
+	color: #6C6CB5;
+	text-decoration: none;
+	outline: 0;
+}
+
+a:before,
+a:after {
+	-webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+	-moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+	-ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+	-o-transition: color 0.1s ease-in, background 0.1s ease-in;
+	transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+
+
+/* ==========================================================================
+   Wrap Sections
+   ========================================================================== */
+
+#headerwrap {
+	background: url(../img/HDpix/cloudSunset.jpg) no-repeat center top;
+	margin-top: 0px;
+	padding-top:120px;
+	text-align:center;
+	background-attachment: relative;
+	background-position: center center;
+	min-height: 650px;
+	width: 100%;
+	
+	-webkit-background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100%;
+	background-size: 100%;
+
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#headerwrapAdamAndCol {
+	background: url(../img/HDpix/boraBora.jpg) no-repeat center top;
+	margin-top: 0px;
+	padding-top:130px;
+	text-align:center;
+	background-attachment: relative;
+	background-position: center center;
+	min-height: 650px;
+	width: 100%;
+	
+	-webkit-background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100%;
+	background-size: 100%;
+
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#headerwrapAdamAndCol h1 {
+	color:#ffffff;
+	margin-top: 100px;
+	padding-bottom: 30px;
+	letter-spacing: 8px;
+	font-size: 100px;
+	font-weight: bold;
+	text-shadow: 2px 2px 2px #000;
+}
+
+#headerwrapAdamAndCol p {
+	color:#ffffff;
+	font-size: 40px;
+	font-weight: 400;
+	text-align: center;
+	line-height: 40px;
+	letter-spacing: 3px;
+	margin-left: 15px;
+	text-shadow: 1px 1px 1px #000;
+}
+
+#headerwrap h1 {
+	color:#ffffff;
+	margin-top: 90px;
+	padding-bottom: 30px;
+	letter-spacing: 8px;
+	font-size: 100px;
+	font-weight: bold;
+	text-shadow: 2px 2px 2px #000;
+}
+
+#headerwrap p {
+	color:#ffffff;
+	font-size: 40px;
+	font-weight: 400;
+	text-align: center;
+	line-height: 40px;
+	letter-spacing: 3px;
+	margin-left: 15px;
+	text-shadow: 1px 1px 1px #000;
+}
+
+#subwrap {
+	background: url(../img/PersonalPictures/NewYork/DSC05281.JPG) no-repeat center top;
+	margin-top: -50px;
+	padding-top:120px;
+	text-align:center;
+	background-attachment: relative;
+	background-position: center center;
+	min-height: 650px;
+	width: 100%;
+	
+	-webkit-background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100%;
+	background-size: 100%;
+
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#subwrap h1 {
+	color:#ffffff;
+	margin-top: 90px;
+	padding-bottom: 30px;
+	letter-spacing: 8px;
+	font-size: 100px;
+	font-weight: bold;
+	text-shadow: 2px 2px 2px #000;
+}
+
+#subwrap p {
+	color:#ffffff;
+	font-size: 40px;
+	font-weight: 400;
+	text-align: center;
+	line-height: 40px;
+	letter-spacing: 3px;
+	margin-left: 15px;
+	text-shadow: 1px 1px 1px #000;
+}
+
+#constructionwrap {
+	background: url(../img/HDpix/Seattle.jpg) no-repeat center top;
+	margin-top: 30px;
+	padding-top:120px;
+	text-align:center;
+	background-attachment: relative;
+	background-position: center center;
+	min-height: 100%;
+	width: 100%;
+	
+	-webkit-background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100%;
+	background-size: 100%;
+
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#constructionwrap h1 {
+	color:#ffffff;
+	margin-top: 60px;
+	padding-bottom: 30px;
+	letter-spacing: 8px;
+	font-size: 100px;
+	font-weight: bold;
+	text-shadow: 2px 2px 2px #000;
+}
+
+#constructionwrap p {
+	color:#ffffff;
+	font-size: 40px;
+	font-weight: 400;
+	text-align: center;
+	line-height: 40px;
+	letter-spacing: 3px;
+	margin-left: 15px;
+	text-shadow: 1px 1px 1px #000;
+}
+
+#italywrap {
+	background: url(../img/HDpix/italy.jpg) no-repeat center top;
+	margin-top: 60px;
+	padding-top:30px;
+	text-align:center;
+	background-attachment: relative;
+	background-position: center center;
+	min-height: 650px;
+	width: 100%;
+	
+	-webkit-background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100%;
+	background-size: 100%;
+
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#italywrap h1 {
+	color:#ffffff;
+	margin-top: -120px;
+	/*padding-bottom: 30px;*/
+	letter-spacing: 8px;
+	font-size: 80px;
+	font-weight: bold;
+	text-shadow: 2px 2px 2px #000;
+}
+
+#italywrap p {
+	color:#ffffff;
+	font-size: 40px;
+	font-weight: 400;
+	text-align: center;
+	line-height: 40px;
+	letter-spacing: 3px;
+	margin-left: 15px;
+	text-shadow: 1px 1px 1px #000;
+}
+#greywrap {
+	background: #f5f5f5;
+	margin-top: 0px;
+	padding-top: 40px;
+	border-bottom: 1px solid #ddd;
+	text-align: center;
+}
+
+#greywrap .callout {
+	margin-bottom: 20px;
+}
+
+#greywrap p {
+	margin-left: 30px;
+	margin-right: 30px;
+	letter-spacing: 1px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+#greywrap .icon {
+	font-size: 60px;
+	line-height: 30px;
+	margin-bottom: 10px;
+}
+
+#footerwrap {
+	background: #2b2b2b;
+	margin-top: 0px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	border-bottom: 1px solid #ddd;
+	text-align: center;
+}
+
+#footerwrap h4 {
+	color: white;
+}
+
+
+/* ==========================================================================
+   Box Sections
+   ========================================================================== */
+
+.white h1 {
+	padding-top: 35px;
+}
+
+.white p {
+	padding-top: 25px;
+}
+
+/* Section Dividers */
+.section-divider {
+	z-index: 999;
+	width: 100%;
+	display: table;
+	max-height: 450px;
+	border-bottom: 2px solid #E6EAED;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	padding-top: 30px;
+	padding-bottom: 70px;
+	margin-top: 45px;
+
+
+	background-position: center center;
+
+	-webkit-background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100%;
+	background-size: 100%;
+
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+	background-attachment: relative;
+	
+	text-align: center;
+}
+
+.textdivider h1 {
+	padding-top: 70px;
+	color: white;
+	font-size: 40px;
+}
+
+.textdivider p {
+	color: white;
+	font-size: 25px;
+}
+
+
+/* Section Dividers Backgrounds */
+
+.divider1 {
+	background-image: url('../img/HDpix/red angels.jpg')
+}
+
+.divider2 {
+	background-image: url('../img/HDpix/train tunnel.jpg')
+}
+
+.divider3 {
+	background-image: url('../img/HDpix/Seattle.jpg');
+	margin-top: 0px;
+}
+
+.divider4 {
+	background-image: url('../img/HDpix/Winter.jpg')
+}
+
+.divider6 {
+	background-image: url('../img/HDpix/Sweet Hills, MT.jpg')
+}
+
+
+
+/* ==========================================================================
+   Services Section
+   ========================================================================== */
+
+.service-trigger {
+	display: block;
+	position: relative;
+	margin-bottom: 15px;
+	color: white;
+	font-size: 20px;
+	text-align: center;
+	height: 168px;
+	cursor: pointer;
+	padding: 90px 20px 50px 20px;
+	border: none;
+	background: #333;
+}
+
+.service-trigger:before {
+	width: 100%;
+	top: 50px;
+	color: #3498db;
+	font-size: 36px;
+	text-align: center;
+	position: absolute;
+	left: 0;
+}
+
+.service-active .service-trigger {
+	background: #222;
+}
+
+.service-active p {
+	font-family: 'Lato', sans-serif;
+	padding-top: 10px;
+}
+
+.service-content {
+	padding: 15px 20px;
+	background: #e6eaed;
+	display: block;
+	height: auto
+}
+
+.service-content p:last-child {
+	margin: 0;
+}
+
+
+/* ==========================================================================
+   Image Mask
+   ========================================================================== */
+
+.grid figure {
+	margin: 0;
+	position: relative;
+}
+
+.grid figure img {
+	width: 100%;
+	display: block;
+	position: relative;
+}
+
+.grid figcaption {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 20px;
+	color: #fff;
+	background: #3498db;
+}
+
+.grid figcaption h5 {
+	margin: 0;
+	padding-top: 0px;
+	padding-left: 20px;
+	padding-bottom: 5px;
+	color: #fff;
+	font-weight: 700;
+	text-align: left;
+	letter-spacing: 2px;
+	
+}
+
+.grid figcaption a {
+	text-align: left;
+	padding: 5px 10px;
+	margin-left: 20px;
+	display: inline-block;
+	background: #2f2f2f;
+	color: #fff;
+	font-size: 13px;
+}
+
+/* Caption Style */
+.mask figure {
+	overflow: hidden;
+}
+
+.mask figure img {
+	-webkit-transition: -webkit-transform 0.4s;
+	-moz-transition: -moz-transform 0.4s;
+	transition: transform 0.4s;
+}
+
+.no-touch .mask figure:hover img,
+.mask figure.cs-hover img {
+	-webkit-transform: translateY(-30px);
+	-moz-transform: translateY(-30px);
+	-ms-transform: translateY(-30px);
+	transform: translateY(-30px);
+}
+
+.mask figcaption {
+	height: 50px;
+	width: 100%;
+	top: auto;
+	bottom: 0;
+	opacity: 0;
+	-webkit-transform: translateY(100%);
+	-moz-transform: translateY(100%);
+	-ms-transform: translateY(100%);
+	transform: translateY(100%);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+	-moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
+	transition: transform 0.4s, opacity 0.1s 0.3s;
+}
+
+.no-touch .mask figure:hover figcaption,
+.mask figure.cs-hover figcaption {
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	-ms-transform: translateY(0px);
+	transform: translateY(0px);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+	-moz-transition: -moz-transform 0.4s, opacity 0.1s;
+	transition: transform 0.4s, opacity 0.1s;
+}
+
+.mask figcaption a {
+	position: absolute;
+	top:10px;
+	bottom: 10px;
+	right: 30px;
+}
+
+
+/* ==========================================================================
+   Blog Section
+   ========================================================================== */
+
+.blog-bg {
+	background: #2b2b2b;
+	padding-right: 0px;
+	padding-left: 0px;
+	
+}
+
+.blog-bg h4 {
+	color: #dadada;
+	padding-top: 0px;
+}
+
+.blog-bg h5 {
+	color: #dadada;
+	font-size: 11px;
+}
+
+.blog-content {
+	padding-top: 10px;
+	background: #f2f2f2;
+}
+
+
+/* ==========================================================================
+   MEDIA QUERIES
+   ========================================================================== */
+
+
+@media screen and (max-width:1050px), screen and (max-device-width:1050px){
+	body .header{background-attachment: scroll;}
+}
+
+
+/*ipad portrait*/
+@media only screen and (min-device-width:768px) and (max-device-width : 1024px) and (orientation : portrait){
+	.header{background-attachment: scroll;}
+}
+
+@media screen and (max-width:769px) {
+	#headerwrap h1 {
+		font-size: 80px;
+	}
+	#headerwrap p {
+		font-size: 30px;
+		line-height: 38px;
+	}
+}
+
+
+-->
+</style>
+</head>
+<body>
+
+<body data-spy="scroll" data-offset="0" data-target="#navbar-main">
+    <div class="col-md-13">
+        
+	<body data-spy="scroll" data-offset="0" data-target="#navbar-main">
+		<!-- ==== HEADERWRAP ==== -->
+		<div id="headerwrap" id="home" name="home">
+			<header class="clearfix">
+					<h1><span class="icon icon-pyramid"></span></h1>
+					<p>Welcome to OmahaStylee.com</p>
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+			</header>
+		</div>
+
+
+
+		<!-- ==== ABOUT ==== -->
+	<div class="container" id="about" name="about">
+		<div class="row white">
+			<br />
+			<h1 class="centered">
+				A LITTLE ABOUT US</h1>
+			<hr />
+			<div class="col-lg-5">
+				<h4 class="centered">Information</h4>
+				<hr />
+				Hello.  Welcome to OmahaStylee.  We invent, we take risks, we disrupt.  We are OmahaStylee. 
+
+<!-- for testing make sure to use the passwords in secret.html -->
+
+<br/><br/>OmahaStylee is truly a testament to the power of learning and development within an organization.  OmahaStylee?  You've 
+probably heard it a lot recently.  It's become one of those "it" phrases.  There are lists talking about how 'OmahaStylee' the 
+market is, or how 'OmahaStylee' a company or an organization is.  But what does it really mean at OmahaStylee?  OmahaStylee isn't 
+just about creating change for changes sake, or causing chaos.  OmahaStylee is truly about changing people's habits and altering 
+their world view.
+<br/><br/>To be OmahaStylee in today's ever evolving world, one must be willing to take risks.  One must be inventive.  Until next 
+time, we are OmahaStylee.
+			</div>
+			<!-- col-lg-2 -->
+			<div class="col-lg-2 centered">
+				<h4>OmahaStylee</h4><hr/>
+				<img class="img img-rounded" src="/img/HDpix/omaha.png" width="100px" 
+					alt="">
+				
+				<br />
+                <br />
+				<br />
+				<br />
+				
+				
+			</div>
+
+			<!-- col-lg-5 -->
+
+			<div class="col-lg-5">
+				<h4 class="centered">
+					Educational Opportunities</h4>
+					<hr />
+			   <ul type="square" id="educationBullets1">
+					<li><b>Acronym Academy</b>
+						<ul type="circle" id="UNO_1">
+							<li>AA101 - How many letters?</li>
+							<li>AA401 - Advanced Acronym Strategies for Beginners</li>
+						</ul></li>
+                    <li><b>Buzzword Bonanza</b></li>
+					<li><b>OmahaStylee College</b>
+						<ul type="circle" id="UNO_2">
+							<li>CC101 - What are your life goals?</li>
+							<li>CC102 - How to be truly OmahaStylee</li>
+						</ul></li>
+					<li><b>Drama Discourse</b>
+						<ul type="circle" id="UNO_3">
+							<li>DD201 - Passive Aggressive Note Taking</li>
+							<li>DD202 - Who Stole My Lunch?</li>
+						</ul>
+						</li>
+					<li><b>Evangelical Evenings</b></li>
+					<li><b>Friendly Fire</b>
+						<ul type="circle" id="UNO_4">
+							<li>FF101 - What bus? A lesson in throwing.</li>
+						</ul></li>
+			   </ul>
+			</div>
+			<!-- col-lg-5 -->
+		</div>
+		<!-- row -->
+	</div>
+	
+			<br />
+			<br />
+		<div class="container" id="contact" name="contact">
+		<div class="row">
+			<br />
+			<h1 class="centered">
+				THANKS FOR VISITING</h1>
+			<hr />
+			<br />
+			<br />
+			<div class="col-lg-4">
+				<h3>
+					Contact Information</h3>
+				<p>
+					<span class="icon icon-home"></span>
+                    <span class="iconText">Omaha, NE</span>
+					<br />
+					<span class="icon icon-phone"></span>
+                    <span class="iconText"><a href="#contact" data-toggle="tooltip" data-placement="right" 
+title="402.911.4567">hover here</a></span>
+					<br />
+					<span class="icon icon-envelop"></span>
+                    <a href="mailto:spam@csgi.com?subject=FromOmahaStylee.com&body=You%20are%20the%20best!" 
+class="iconText">email@gmail.com</a>
+					<br />
+					<span class="icon icon-twitter"></span>
+                    <a href="https://twitter.com/OmahaStylee" class="iconText">@OmahaStylee </a>
+					<br />
+					<span class="icon icon-facebook"></span>
+                    <a href="https://www.facebook.com/OmahaStylee" class="iconText">OmahaStylee's on Facebook</a>
+					<br />
+				</p>
+			</div>
+			<!-- col -->
+			<div class="col-lg-4">
+				<h3>
+					Newsletter</h3>
+				<p>
+					We don't have a newsletter quite yet, but when we're ready to start creating Technical Blog 
+entries we will be sending out updates.
+				</p>
+				<p>
+					<form class="form-horizontal" role="form">
+					    <div class="form-group">
+						    <div class="col-lg-10" style="margin-bottom:5px;">
+							    <input type="email" class="form-control" id="inputEmail1" 
+placeholder="Email" />
+						    </div>
+						    <div class="col-lg-10" style="margin-bottom:5px;">
+                                <div class="input-group">
+							        <input type="text" class="form-control" id="text1" placeholder="Your 
+Name" />
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-success disabled" type="submit">Submit</button>
+                                    </span>
+                                </div>
+						    </div>
+					    </div>
+					</form>
+					<!-- form -->
+				</p>
+			</div>
+			<!-- col -->
+			<div class="col-lg-4">
+				<h3>
+					Instructions</h3>
+				<p>
+					Find the flag.  I added some bonus challenges too.
+                </p>
+				<ul>
+                    <li>25 pts - Identify the flag through directory traversal.</li>
+                    <li>15 pts - Determine what type of cryptography is used for the flag.</li>
+                    <li>10 pts - Explain why this is no longer a viable form of cryptography.</li>
+                    <li>20 pts - Find the testing password.</li>
+                </ul>
+			</div>
+			<!-- col -->
+		</div>
+		<!-- row -->
+	</div>
+
+		<div id="footerwrap">
+		<div class="container">
+			<h4>
+				Created by <a href="#about">Anonymous OmahaStylee Employee</a></h4>
+		</div>
+	</div>
+	</body>
+
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</body>
+</html>
